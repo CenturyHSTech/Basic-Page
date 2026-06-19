@@ -3,47 +3,60 @@
 [top](#one-pager-project) | [learning target](#learning-target) | [requirements](#requirements) | [instructions](#instructions) | [FTW: For the Win](#for-the-win)
 
 ## Learning Target: 
-Students will be generate a **one pager** web project devoted to a topic of choice that focuses on a business, historical event or person, how to instructional page, travel destination, or something similar. This page will apply a variety of common HTML elements and apply solid design skills using CSS techniques to apply layout, typography, and colors.
+Students will be generate a **one pager** web project devoted to a topic of choice (a business, historical event or person, how to instructional page, travel destination, or something similar). This page will apply a variety of common HTML elements and apply basic CSS techniques to apply fonts and colors.
 
 [top](#one-pager-project) | [learning target](#learning-target) | [requirements](#requirements) | [instructions](#instructions) | [FTW: For the Win](#for-the-win)
 
 ## Requirements:
+NOTE: for the course outcome related to `HTML` and `CSS`, your score will be calculated using the pytest tests.
 ### HTML Requirements
 * Your one-pager must be named `index.html`
 * Must ***use appropriate headers*** according to semantic reasoning
-* Must have at least ***three sections each*** labeled ***with an appropriate header***.
+* Must have at least ***two sections*** each labeled ***with an appropriate header***.
     - should be level 2 headings.
     - sub headings (level 3) are allowed, but only if you are breaking up a section into sub-sections 
-* Must have (on average) at least two paragraphs per section (for a total of 6 in all).
-* Must include at least **2 images**, and every image, should be...
-    - inside **a figure** element
-    - with **a caption**
-    - credits
-* Page should include at least **4 links**
-* Must have at least **two lists** with on average **3 list items per list**
-    - They can be ordered or unordered (your choice)
+* Must have at least six paragraphs in all (try to not put them all in one section).
+* Must pass HTML Validation (test your page using the [w3c validator](https://validator.w3.org/))
 
 ### CSS Requirements
 * Must ***use CSS*** as a style tag or external stylesheet to add styles.
-    - ***May NOT use the style attribute***
-* ***Font family should be modified*** (not default font)
+    - ***You may NOT use the style attribute***
+* ***Use a [Google Font](https://fonts.google.com/)*** (not default font)
     - Only 1 font-family is required
-    - A font-pairing might be nice
-* ***Colors*** (background and foreground) ***must be applied*** to...
-    - Headers
-    - all remaining tags using a global selector (html or body)
-* All color combinations, must meeting **Color Contrast at a Level AAA**
-    - Most text must meet **Normal Level AAA**
-    - Large text may meet **Large Level AAA**
-    - According to the [Color Contrast Checker](), *"Large text is defined as ...**18.66px and bold or larger**, or ...**24px or larger**."*
-* All HTML and CSS must pass W3C Validation with no errors.
+    - The font should be readable (avoid fancy and highly stylized fonts)
+* ***Colors*** (background and foreground) ***must be applied*** to the page
+    - add it to the `body` or `html` tag.
+* Make sure it ***passes the [CSS Validator](https://jigsaw.w3.org/css-validator/)***
+* Make sure it is readable (using a readable font and a high color contrast)
+
+### For The Win (FTW)
+Please meet the following requirements in order to score a 4/4 in each of the following course outcomes:
+* "Develop Static Websites...":
+    - Add 1 3rd section, which means you will need to have...
+        + at least 3 `h2` tags in all
+        + at least 9 paragraphs in all
+    - Break up each section with a break tag (at least 2 in all)
+    - Make a font-pairing using Google fonts (see [Top 50 Google Font Pairings [Handpicked by Pro Designers]](https://www.pagecloud.com/blog/best-google-fonts-pairings))
+    - Pick a color palette for your page (from a site such as [coolers.co](https://coolors.co/) or  [Color Hunt](https://colorhunt.co/))
+    - Change the color on your headings (`h1` and `h2`) (so they are not the same as your normal text)
+    - There is a maximum paragraph width set in `em`s or `rem`s 
+    - Make sure any color combinations meet **Color Contrast at a Level AAA**
+        + Most text must meet **Normal Level AAA**
+        + Large text may meet **Large Level AAA**
+        + According to the [Color Contrast Checker](), *"Large text is defined as ...**18.66px and bold or larger**, or ...**24px or larger**."*
+* "Apply Design Principles..."":
+    - Make sure the colors are from a color palette and they look good.
+    - Make sure the colors meet color contrast (see above).
+    - Make sure text is readable, and the fonts do not compete with the theme of the content.
+    - Make sure text is readable, and the paragraphs are not too wide.
+    - Make sure paragraphs are not centered text
 
 ### Design Requirements:
 Note: these requirements will be scored directly by your teacher.
 * Above all, ***text must be readable*** (both through the font-face as well as in the use of high contrast colors)
 * Use of fonts (no more than 2) and colors match the content of the site.
 * All paragraphs of text are broken up into smaller chunks of text and  left-aligned or justified (NOT centered).
-* Bullet and numbered lists should also be left-aligned.
+* The only text that may be centered is the headings (`h1` and/or `h2`)
 * Typography follows most guidelines of the [Practical Typography Summary of Key Rules](https://practicaltypography.com/summary-of-key-rules.html) especially font size, line spacing, and line length.
 * Layout is balanced without any irregular gaps that call attention to themselves. Any images should be floated so the text wraps around it.
 
