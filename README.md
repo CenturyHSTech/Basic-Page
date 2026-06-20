@@ -3,6 +3,9 @@
 ## Learning Target: 
 Students will be generate a **one pager** web project devoted to a topic of choice (a business, historical event or person, how to instructional page, travel destination, or something similar). This page will apply a variety of common HTML elements and apply basic CSS techniques to apply fonts and colors.
 
+---------
+[top](#basic-page-project) | [learning target](#learning-target) | [instructions](#instructions) | [project requirements](#project-requirements) | [grading](#grading)
+
 ## Instructions:
 Once you have accepted the assignment and have a copy of your repo...
 
@@ -38,8 +41,10 @@ Once you have accepted the assignment and have a copy of your repo...
 ***NOTE**: this too is only necessary to test your project to see if you meet all `HTML` and `CSS` coding requirements.
 
 1. Click the Test Icon (a flask) and choose "Configure Python Tests"
+
     ![test icon and configure python tests](assets/configure-tests.png)
 2. Select the "pytest" test option
+
     ![select pytest framework](assets/choose-pytest.png)
 3. Select the tests folder
 
@@ -51,6 +56,7 @@ Once you have accepted the assignment and have a copy of your repo...
 
 </details>
 
+### Working on Your Project 
 <details>
 <summary><b>Adding your Web Content</b></summary>
 
@@ -89,8 +95,9 @@ Once you have accepted the assignment and have a copy of your repo...
         + Headers at least 18.7px or larger may pass at Large AA level and still pass.
 </details>
 
+### Tracking Your Project History
 <details>
-    <summary>Using Git to track your project's history</summary>
+    <summary><b>Using Git</b></summary>
 
     * As you work on your page, be sure to commit and push your changes using the following commands:
         - `git add *`
@@ -105,9 +112,9 @@ Once you have accepted the assignment and have a copy of your repo...
 </details>
 
 ---------
-[top](#basic-page-project) | [learning target](#learning-target) | [requirements](#requirements) | [instructions](#instructions) | [FTW: For the Win](#for-the-win)
+[top](#basic-page-project) | [learning target](#learning-target) | [instructions](#instructions) | [project requirements](#project-requirements) | [grading](#grading)
 
-## Requirements:
+## Project Requirements:
 NOTE: for the course outcome related to `HTML` and `CSS`, your score will be calculated using the pytest tests.
 <details>
 <summary><b>HTML Requirements</b></summary>
@@ -135,12 +142,15 @@ NOTE: for the course outcome related to `HTML` and `CSS`, your score will be cal
     - add it to the `body` or `html` tag.
 * Make sure it ***passes the [CSS Validator](https://jigsaw.w3.org/css-validator/)***
 * Make sure it is readable (using a readable font and a high color contrast)
-</details>
-<details>
-<summary><b>Design Requirements</summary>
-</b>
 
-Note: these requirements will be scored directly by your teacher.
+</details>
+
+<br>
+
+The **design** score, however, will be scored by your teacher
+<details>
+<summary><b>Design Requirements</b></summary>
+
 * Above all, ***text must be readable*** (both through the font-face as well as in the use of high contrast colors)
 * Use of fonts (no more than 2) and colors match the content of the site.
 * All paragraphs of text are broken up into smaller chunks of text and  left-aligned or justified (NOT centered).
@@ -151,12 +161,13 @@ Note: these requirements will be scored directly by your teacher.
 
 -------
 
-[top](#basic-page-project) | [learning target](#learning-target) | [requirements](#requirements) | [instructions](#instructions) | [FTW: For the Win](#for-the-win)
+[top](#basic-page-project) | [learning target](#learning-target) | [instructions](#instructions) | [project requirements](#project-requirements) | [grading](#grading)
 
 
-## Scoring Categories
+
+## Grading
 Your project will receive a score based on the final criteria:
-
+### For Proficient (3/4)
 <details>
 <summary><b>Develop static websites</b>...</summary> 
 
@@ -177,46 +188,66 @@ These tests will be measured by your instructor using the [design requirements g
 <details><summary><b>Apply project management skills</b>...</summary>
 
 and use industry-standard tools** to plan, track, and complete development projects effectively.
-* Your instructor will measure this based on your use of Git commits (the naming and use of commits)
-    - do not commit by file upload.
-    - use consistent commit naming conventions (brief, descriptive, to the point, not off-topic)
-    - commit messages should be about the changes in the code, not your frustration over tests or random. 
-* It will also be based on your scores above (if you don't get a 4/4 in either of the previous categories, a 3/4 is the best you can get here)
+* Uses Git to track work with multiple commits
+* Commit messages are generally descriptive and related to the code changes
+* Follows basic expectations (does not rely on file upload, commits reflect work progress)
 </details>
 
 <details>
 <summary><b>Demonstrate professionalism and employability skills</b> relevant to computer science careers.</summary>
 
 * Turned project in on time and followed submission requirements (***self-awareness***)
-* All required content is present and the page loads without errors (self-awareness / resilience)
-* No major grammar or spelling errors; text and headings are clear (communication)
-* File(s) are correctly named and organized (e.g., index.html, styles.css if used) (digital literacy)
+* Content is appropriate for a school/professional audience (**self-awareness** / **resilience**)
+* Uses clear and appropriate naming and structure (for example: index.html, meaningful link text and headings) (**digital literacy**/ **communication**)
+* No major grammar/spelling errors; text and links clearly communicate purpose to a user (**communication**)
 
 </details>
-    
 
-[top](#basic-page-project) | [learning target](#learning-target) | [requirements](#requirements) | [instructions](#instructions) | [FTW: For the Win](#for-the-win)
-
-## For the Win...
+### For the Win (4/4)
 Please meet the following requirements in order to score a 4/4 in each of the following course outcomes:
-* "Develop Static Websites...":
-    - Add 1 3rd section, which means you will need to have...
-        + at least 3 `h2` tags in all
-        + at least 9 paragraphs in all
-    - Break up each section with a break tag (at least 2 in all)
-    - Make a font-pairing using Google fonts (see [Top 50 Google Font Pairings [Handpicked by Pro Designers]](https://www.pagecloud.com/blog/best-google-fonts-pairings))
-    - Pick a color palette for your page (from a site such as [coolers.co](https://coolors.co/) or  [Color Hunt](https://colorhunt.co/))
-    - Change the color on your headings (`h1` and `h2`) (so they are not the same as your normal text)
-    - There is a maximum paragraph width set in `em`s or `rem`s 
-    - Make sure any color combinations meet **Color Contrast at a Level AAA**
-        + Most text must meet **Normal Level AAA**
-        + Large text may meet **Large Level AAA**
-        + According to the [Color Contrast Checker](), *"Large text is defined as ...**18.66px and bold or larger**, or ...**24px or larger**."*
-* "Apply Design Principles..."":
-    - Make sure the colors are from a color palette and they look good.
-    - Make sure the colors meet color contrast (see above).
-    - Make sure text is readable, and the fonts do not compete with the theme of the content.
-    - Make sure text is readable, and the paragraphs are not too wide.
-    - Make sure paragraphs are not centered text
 
-[top](#basic-page-project) | [learning target](#learning-target) | [requirements](#requirements) | [instructions](#instructions) | [FTW: For the Win](#for-the-win)
+<details>
+<summary><b>Develop Static Websites...</b></summary>
+
+
+* Add 1 3rd section, which means you will need to have...
+    - at least 3 `h2` tags in all
+    - at least 9 paragraphs in all
+* Break up each section with a break tag (at least 2 in all)
+* Make a font-pairing using Google fonts (see [Top 50 Google Font Pairings [Handpicked by Pro Designers]](https://www.pagecloud.com/blog/best-google-fonts-pairings))
+* Pick a color palette for your page (from a site such as [coolers.co](https://coolors.co/) or  [Color Hunt](https://colorhunt.co/))
+* Change the color on your headings (`h1` and `h2`) (so they are not the same as your normal text)
+* There is a maximum paragraph width set in `em`s or `rem`s 
+* Make sure any color combinations meet **Color Contrast at a Level AAA**
+    - Most text must meet **Normal Level AAA**
+    - Large text may meet **Large Level AAA**
+    - According to the [Color Contrast Checker](), *"Large text is defined as ...**18.66px and bold or larger**, or ...**24px or larger**."*
+</details>
+
+<details>
+<summary><b>Apply Design Principles...</b></summary>
+
+* Make sure the colors are from a color palette and they look good.
+* Make sure the colors meet color contrast (see above).
+* Make sure text is readable, and the fonts do not compete with the theme of the content.
+* Make sure text is readable, and the paragraphs are not too wide.
+* Make sure paragraphs are not centered text
+</details>
+<details>
+<summary><b>Apply Project Management Skills</b></summary>
+
+* Uses Git consistently throughout development with purposeful, well-timed commits
+* Commit messages are clear, concise, and follow a consistent naming convention
+* Commits accurately reflect meaningful changes and demonstrate an organized workflow
+</details>
+
+<details>
+<summary><b>Demonstrate Professionalism and employability skills</b></summary>
+
+* Turned project in on time and fully met all requirements without reminders (self-awareness)
+* Content is consistently appropriate, purposeful, and demonstrates awareness of a real-world audience (self-awareness)
+* Naming and structure are consistently clear and intentional, reflecting strong use of basic development conventions (digital literacy / communication)
+* Writing is polished, clear, and free of errors, making the page easy to understand and navigate (communication)
+</details>
+
+[top](#basic-page-project) | [learning target](#learning-target) | [instructions](#instructions) | [project requirements](#project-requirements) | [grading](#grading)
