@@ -97,17 +97,17 @@ Once you have accepted the assignment and have a copy of your repo...
 
 ### Tracking Your Project History
 <details>
-    <summary><b>Using Git</b></summary>
+<summary><b>Using Git</b></summary>
 
-    * As you work on your page, be sure to commit and push your changes using the following commands:
-        - `git add *`
-        - `git commit -m "concise explanation of what you did"`
-        - `git push origin main`
-    * When you push your changes, check the repo to see if you passed tests.
-    * Once you've passed all tests, you will receive a green check and a 4/4 on the GitHub Classroom assignment.
-    * To turn in your assignment, take a screen capture of the final product as seen on a browser and turn that in.
-        - Your teacher can see if you passed all tests
-        - You will then receive a grade based on the scoring categories (see [scoring categories](#scoring-categories))
+* As you work on your page, be sure to commit and push your changes using the following commands:
+    - `git add *`
+    - `git commit -m "concise explanation of what you did"`
+    - `git push origin main`
+* When you push your changes, check the repo to see if you passed tests.
+* Once you've passed all tests, you will receive a green check and a 4/4 on the GitHub Classroom assignment.
+* To turn in your assignment, take a screen capture of the final product as seen on a browser and turn that in.
+    - Your teacher can see if you passed all tests
+    - You will then receive a grade based on the scoring categories (see [scoring categories](#scoring-categories))
 
 </details>
 
