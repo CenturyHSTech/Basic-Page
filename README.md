@@ -123,7 +123,8 @@ NOTE:
 <summary><b>HTML Requirements</b></summary>
 
 ***As scored in `test_html.py`(for proficient 3/4) and `test_exceeds.py` (for exceeds 4/4)***
-* Your one-pager must be named `index.html`
+* Your web page must be named `index.html`
+* Your page should include all standard tags that should be present in any `HTML` document (one `DOCSTRING` one `html` one `head` one `title` one `body`, and one `h1`)
 * Must ***use appropriate headers*** according to semantic reasoning
 * Must have at least ***two sections*** each labeled ***with an appropriate header***.
     - should be level 2 headings.
