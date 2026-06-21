@@ -115,10 +115,13 @@ Once you have accepted the assignment and have a copy of your repo...
 [top](#basic-page-project) | [learning target](#learning-target) | [instructions](#instructions) | [project requirements](#project-requirements) | [grading](#grading)
 
 ## Project Requirements:
-NOTE: for the course outcome related to `HTML` and `CSS`, your score will be calculated using the pytest tests.
+NOTE: 
+* this is a list of requirements for the project itself
+* You will also be scored on **project management** and **professionalism**
 <details>
 <summary><b>HTML Requirements</b></summary>
 
+***As scored in `test_html.py`(for proficient 3/4) and `test_exceeds.py` (for exceeds 4/4)***
 * Your one-pager must be named `index.html`
 * Must ***use appropriate headers*** according to semantic reasoning
 * Must have at least ***two sections*** each labeled ***with an appropriate header***.
@@ -133,6 +136,8 @@ NOTE: for the course outcome related to `HTML` and `CSS`, your score will be cal
 <details>
 <summary><b>CSS Requirements</b></summary> 
 
+
+***As scored in `test_css.py` (for proficient 3/4) and `test_exceeds.py` (for exceeds 4/4)***
 * Must ***use CSS*** as a style tag or external stylesheet to add styles.
     - ***You may NOT use the style attribute***
 * ***Use a [Google Font](https://fonts.google.com/)*** (not default font)
@@ -158,7 +163,19 @@ The **design** score, however, will be scored by your teacher
 * Typography follows most guidelines of the [Practical Typography Summary of Key Rules](https://practicaltypography.com/summary-of-key-rules.html) especially font size, line spacing, and line length.
 * Layout is balanced without any irregular gaps that call attention to themselves. Any images should be floated so the text wraps around it.
 </details>
+<details>
+<summary><b>Project Management Requirements</b></summary>
 
+* You create a **public** GitHub repo using this template
+* You follow instructions (listed here)
+* You commit your work on a regular basis using commit messages that are...
+    - concise (brief and to the point)
+    - descriptive of the changes
+    - consistently formatted (in grammar structure)
+* You use git push (not by file upload)
+* You turn in both...
+    - a link to your GitHub repo
+</details>
 -------
 
 [top](#basic-page-project) | [learning target](#learning-target) | [instructions](#instructions) | [project requirements](#project-requirements) | [grading](#grading)
