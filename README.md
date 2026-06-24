@@ -130,7 +130,7 @@ NOTE:
     - should be level 2 headings.
     - sub headings (level 3) are allowed, but only if you are breaking up a section into sub-sections 
 * Must have at least six paragraphs in all (try to not put them all in one section).
-* Must include at least two links that are
+* Must include at least two links (should be inside of a paragraph)
 * Must pass HTML Validation (test your page using the [w3c validator](https://validator.w3.org/))
 
 </details>

@@ -14,16 +14,6 @@ styles_by_html_files = css.get_styles_by_html_files(project_path)
 color_contrast_results = contrast.generate_contrast_report(project_path)
 no_style_attribute_tests = []
 
-required_properties = {
-    "body": {"properties": ("color", "background or background-color"),},
-    "nav": {"properties": ("padding",),},
-    "main": {"properties": ("padding",),},
-    "article": {"properties": ("padding",),},
-    "aside": {"properties": ("padding",),},
-    "hgroup": {"properties": ("padding",),},
-    "section": {"properties": ("padding",),},
-    "footer": {"properties": ("padding",),},
-}
 ILLEGAL_FONTS = ("comic sans ms", "comic sans", "times new roman")
 
 def set_style_attribute_tests(path):
@@ -105,46 +95,6 @@ def get_font_rules_data(font_tests):
     return rules_data
 
 
-def prep_properties_applied_report(project_path, required_properties,
-                                   required_and_used):
-    # Figure out how to only test for required and used elements
-    properties_applied_report = css.get_properties_applied_report(
-        project_path,
-        required_properties
-    )
-    final_report = set()
-    # get all elements from required_and_used
-    html_files = html.get_all_html_files(project_path)
-    actual_elements = set()
-    for file in html_files:
-        for element in required_and_used:
-            element = html.get_elements(element, file)
-            if element:
-                element_name = element[0].name
-                actual_elements.add(element_name)
-    for actual_element in actual_elements:
-        for error in properties_applied_report:
-            if actual_element in error:
-                final_report.add(error)
-    return final_report
-
-
-def get_required_properties(required_properties, has_required_properties,
-                            styles_by_files):
-    for file in styles_by_files:
-        declarations = file.get("stylesheets")
-        for declaration in declarations:
-            prop = declaration.property
-            if prop in required_properties:
-                has_required_properties[prop] = True
-            elif "background" in prop:
-                # using shorthand?
-                split_values = declaration.value.split()
-                for value in split_values:
-                    if css.color_tools.is_hex(value):
-                        has_required_properties["background-color"] = True
-
-
 def applies_css(styles_by_html_files: list) -> list:
     results = []
     for item in styles_by_html_files:
@@ -176,16 +126,6 @@ def project_folder():
     return project_path
 
 
-@pytest.fixture
-def html_styles():
-    return styles_by_html_files
-
-
-@pytest.fixture
-def html_docs():
-    return html_files
-
-
 @pytest.mark.parametrize("result,expected", applies_styles)
 def test_for_any_css_tag_or_stylesheet(result, expected):
     assert result == expected
@@ -200,7 +140,12 @@ def test_files_for_style_attribute_data(result, expected):
 def test_files_for_2_font_families_max(expected, result):
     assert result == expected
 
+@pytest.fixture
+def global_color_details():
+    global_color_report = css.get_global_color_report(project_path)
+    return global_color_report
 
-@pytest.mark.parametrize("message", required_properties)
-def test_for_required_properties(message):
-    assert "pass:" in message[:6]
+
+def test_for_colors_applied_to_html_or_body(global_color_details):
+    for data in global_color_details:
+        assert "pass: " in data[:6]

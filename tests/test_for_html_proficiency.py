@@ -31,7 +31,8 @@ def test_for_minimum_number_of_html_files(files):
     assert len(files) >= 1
 
 def test_for_index_page(files):
-    assert "index.html" in files
+    file = files[0]
+    assert "index.html" in file
 
 
 @pytest.mark.parametrize("element,num", exact_required_elements)
