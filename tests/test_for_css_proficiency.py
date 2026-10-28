@@ -4,6 +4,7 @@ Test CSS Requirements.
 from bs4 import BeautifulSoup
 import pytest
 import file_clerk.clerk as clerk
+from webcode_tk import cascade_tools as cascade
 from webcode_tk import contrast_tools as contrast
 from webcode_tk import css_tools as css
 from webcode_tk import html_tools as html
@@ -12,9 +13,11 @@ project_path = "project/"
 html_files = html.get_all_html_files(project_path)
 styles_by_html_files = css.get_styles_by_html_files(project_path)
 color_contrast_results = contrast.generate_contrast_report(project_path)
-no_style_attribute_tests = []
+styles_applied = css.styles_applied_report(project_path)
+no_style_attribute_tests = css.no_style_attributes_allowed_report(project_path)
 
 ILLEGAL_FONTS = ("comic sans ms", "comic sans", "times new roman")
+
 
 def set_style_attribute_tests(path):
     results = []

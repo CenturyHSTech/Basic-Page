@@ -112,9 +112,14 @@ def get_elements_in_project(project_dir: str, min_required: list):
 
 min_required_elements = [
     ("h2", 3),
-    ("p", 9),
+    ("p", 8),
     ("a", 5),
-    ("br", 2)]
+    ("br", 2),
+    ("ul or ol", 3),
+    ("li", 12),
+    ("img", 4),
+    ("figure", 4),
+    ("figcaption", 4)]
 
 min_number_of_elements = get_elements_in_project(project_dir,
                                                  min_required_elements)
@@ -140,7 +145,7 @@ def test_for_html_exceeds_number_of_image_files():
     image_files += clerk.get_all_files_of_type(project_dir, "png")
     image_files += clerk.get_all_files_of_type(project_dir, "gif")
     image_files += clerk.get_all_files_of_type(project_dir, "webp")
-    assert len(image_files) >= 10
+    assert len(image_files) >= 3
 
 
 if __name__ == '__main__':

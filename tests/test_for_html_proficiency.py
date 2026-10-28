@@ -15,8 +15,12 @@ exact_required_elements = [
     ]
 min_required_elements = [
     ("h2", 2),
-    ("p", 6),
+    ("p", 5),
     ("a", 2),
+    ("ul or ol", 2),
+    ("li", 7),
+    ("img", 3),
+    ("div or figure", 3)
     ]
 
 project_path = "project/"

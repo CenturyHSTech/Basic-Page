@@ -1,43 +1,39 @@
-# Place your project here.
-This is where you will put your HTML document.
-I recommend you add an `images` folder and place your images inside.
-For more details, please read the [One Pager Project Requirements](../README.md).
+# My Basic Web Page
+Put your html file/s in here. 
 
-## HTML Requirements:
-* Your one-pager must be named `index.html`
-* Must ***use appropriate headers*** according to semantic reasoning
-* Must have at least ***three sections each*** labeled ***with an appropriate header***.
-    - should be level 2 headings.
-    - [optional] sub headings (level 3) are allowed, but only if you are breaking up a section into sub-sections 
-* Must have (on average) at least two paragraphs per section (for a total of 6 in all).
-* Must include at least **2 images**, and every image, should be...
-    - inside **a figure** element
-    - with **a caption**
-    - credits
-* Page should include at least **4 links**
-* Must have at least **two lists** with on average **3 list items per list**
-    - They can be ordered or unordered (your choice)
+## Required Elements
+### HTML Main Requirements
+* Standard HTML Tags - there should be one for each page (no more no less)
+    - `DOCTYPE`
+    - `html`
+    - `head`
+    - `title`
+* Other required tags (see minimum #)
+    - `h1` -> one per page
+    - `h2` -> two per page
+    - `p`  -> at least 5
+    - `ul` OR `ol` -> at least two per page 
+    - `li` -> at least 7 in all
+    - `a` -> at least 2 (should be in an `li` or `p` tag)
 
-## CSS Requirements
-* Must ***use CSS*** as a style tag or external stylesheet to add styles.
-    - ***May NOT use the style attribute***
-* ***Font family should be modified*** (not default font)
-    - Only 1 font-family is required
-    - A font-pairing might be nice
-* ***Colors*** (background and foreground) ***must be applied*** to...
-    - Headers
-    - all remaining tags using a global selector (html or body)
-* All color combinations, must meeting **Color Contrast at a Level AAA**
-    - Most text must meet **Normal Level AAA**
-    - Large text may meet **Large Level AAA**
-    - According to the [Color Contrast Checker](), *"Large text is defined as ...**18.66px and bold or larger**, or ...**24px or larger**."*
-* All HTML and CSS must pass W3C Validation with no errors.
+### Validity Requirements
+* No HTML errors are allowed
 
-## Design Requirements:
-Note: these requirements will be scored directly by your teacher.
-* Above all, ***text must be readable*** (both through the font-face as well as in the use of high contrast colors)
-* Use of fonts (no more than 2) and colors match the content of the site.
-* All paragraphs of text are broken up into smaller chunks of text and  left-aligned or justified (NOT centered).
-* Bullet and numbered lists should also be left-aligned.
-* Typography follows most guidelines of the [Practical Typography Summary of Key Rules](https://practicaltypography.com/summary-of-key-rules.html) especially font size, line spacing, and line length.
-* Layout is balanced without any irregular gaps that call attention to themselves. Any images should be floated so the text wraps around it.
+### CSS Requirements
+* Do NOT use style attributes in your HTML - only use a style tag in the head or an external stylesheet.
+* Fonts:
+    - Apply either a font or font-pair other than Times New Roman or Comic Sans
+    - IMPORTANT NOTE ON TYPOGRAPHY AND READABILITY: 
+        + in design, the font you choose might hurt readability
+        + avoid making all paragraph text bold because it makes content difficult to read 
+        + all bold test doesn't highlight key information effectively. 
+        + Instead, use bolding sparingly for emphasis on important words or phrases, balance it with regular text, and use semantic HTML like `<strong>` for accessibility. 
+
+* Colors:
+    - ALL COLORS must meet [WebAIM color contrast](https://webaim.org/resources/contrastchecker/) goals at the ***"WCAG AAA"*** rating
+    - Apply a **background color** to the page (through the body or html)
+    - Apply a **color** to the text (through the body or html)
+    - Apply a **color** to hyperlinks (to both the link and visited - hover is optional)
+    - Add **padding** to any of the following layout elements if present (`header`, `nav`, `main`, `article`, `aside`, `hgroup` `section`, `footer`).
+
+NOTE: to check for errors, be sure to upload your HTML file to the [W3C File Upload Validator](https://validator.w3.org/#validate_by_upload)

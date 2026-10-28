@@ -82,18 +82,11 @@ Once you have accepted the assignment and have a copy of your repo...
 <details>
 <summary><b>Styling Your Page</b></summary>
 
-1. Add a `<style>` tag to the head.
-2. In the `style` tag, target and style all content using a global selector (`body` or `html`).
-    - change the font using either a ***[Google font](https://fonts.google.com/)***
-    - Find and apply a good, high-contrast color combination for the background and text color
-        + colors should go well with the selected topic
-        + colors should have a really high contrast
-        + use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) (the higher the contrast number the better - aim for 8 or higher)
-3. Target and style the headers.
-    - I recommend targetting all possible selectors as one.
-    - Use another color for the text than you did in the global selector
-        + All headers smaller than 18.7px must pass at Normal AA level
-        + Headers at least 18.7px or larger may pass at Large AA level and still pass.
+1. Add CSS using a `<style>` tag in the head or an external stylesheet; do not use style attributes in HTML.
+2. Apply a readable font or font pairing other than Times New Roman or Comic Sans.
+3. Apply a background color and text color to the `body` or `html`, and set colors for both regular and visited hyperlinks.
+4. Make sure all colors meet WCAG AAA contrast goals using the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
+5. Add padding to any layout elements you use, such as `header`, `nav`, `main`, `article`, `aside`, `hgroup`, `section`, or `footer`.
 </details>
 
 ### Tracking Your Project History
@@ -104,8 +97,8 @@ Once you have accepted the assignment and have a copy of your repo...
     - `git add *`
     - `git commit -m "concise explanation of what you did"`
     - `git push origin main`
-* When you push your changes, check the repo to see if you passed tests.
-* Once you've passed all tests, you will receive a green check and a 4/4 on the GitHub Classroom assignment.
+* When you push a commit, the **Autograding Tests** GitHub Actions workflow runs the pytest suite.
+* The workflow shows a green check when all tests pass. Its run summary lists passed, failed, and skipped tests per test file, includes details for failing tests, and gives a final score out of 4: 4/4 for all tests passing; 3/4 when all tests in files with `proficiency` in their names pass; 2/4 when at least half of all tests pass; otherwise 1/4.
 * To turn in your assignment, take a screen capture of the final product as seen on a browser and turn that in.
     - Your teacher can see if you passed all tests
     - You will then receive a grade based on the scoring categories (see [scoring categories](#scoring-categories))
@@ -122,15 +115,16 @@ NOTE:
 <details>
 <summary><b>HTML Requirements</b></summary>
 
-***As scored in `test_html.py`(for proficient 3/4) and `test_exceeds.py` (for exceeds 4/4)***
+**Automated HTML requirements**
 * Your web page must be named `index.html`
 * Your page should include all standard tags that should be present in any `HTML` document (one `DOCSTRING` one `html` one `head` one `title` one `body`, and one `h1`)
 * Must ***use appropriate headers*** according to semantic reasoning
 * Must have at least ***two sections*** each labeled ***with an appropriate header***.
     - should be level 2 headings.
     - sub headings (level 3) are allowed, but only if you are breaking up a section into sub-sections 
-* Must have at least six paragraphs in all (try to not put them all in one section).
-* Must include at least two links (should be inside of a paragraph)
+* Must have at least five paragraphs per page (try to distribute them across sections).
+* Must have at least two lists (`ul` or `ol`) per page and at least seven `li` elements in all.
+* Must include at least two links, inside a list item or paragraph.
 * Must pass HTML Validation (test your page using the [w3c validator](https://validator.w3.org/))
 
 </details>
@@ -139,16 +133,14 @@ NOTE:
 <summary><b>CSS Requirements</b></summary> 
 
 
-***As scored in `test_css.py` (for proficient 3/4) and `test_exceeds.py` (for exceeds 4/4)***
+**Automated CSS requirements**
 * Must ***use CSS*** as a style tag or external stylesheet to add styles.
     - ***You may NOT use the style attribute***
-* ***Use a [Google Font](https://fonts.google.com/)*** (not default font)
-    - Only 1 font-family is required
-    - The font should be readable (avoid fancy and highly stylized fonts)
-* ***Colors*** (background and foreground) ***must be applied*** to the page
-    - add it to the `body` or `html` tag.
-* Make sure it ***passes the [CSS Validator](https://jigsaw.w3.org/css-validator/)***
-* Make sure it is readable (using a readable font and a high color contrast)
+* Apply a readable font or font pairing other than Times New Roman or Comic Sans.
+* Apply a background color and text color to the `body` or `html`, and set colors for both regular and visited hyperlinks.
+* Make sure all colors meet WCAG AAA contrast goals.
+* Add padding to any layout elements you use, such as `header`, `nav`, `main`, `article`, `aside`, `hgroup`, `section`, or `footer`.
+* Do not use style attributes in HTML; use a `<style>` tag in the head or an external stylesheet.
 
 </details>
 
@@ -192,8 +184,9 @@ Your project will receive a score based on the final criteria:
 
 by structuring content with HTML and formatting it using CSS to create well-organized and visually appealing web pages.
 
-* To score a 3/4, you must pass following pytests: `test_html` and `test_css`
-* To get the extra point to bring it up to 4/4, you must pass `test_exceeds`
+* The automated score is reported by the **Autograding Tests** workflow after each push.
+* Passing every test in files with `proficiency` in their names earns 3/4, unless all tests pass, which earns 4/4.
+* See the scoring rules in [Tracking Your Project History](#tracking-your-project-history) for the other score levels.
 </details>
 
 <details>
@@ -223,24 +216,12 @@ and use industry-standard tools** to plan, track, and complete development proje
 </details>
 
 ### For the Win (4/4)
-Please meet the following requirements in order to score a 4/4 in each of the following course outcomes:
+The automated score is 4/4 when all tests pass. Use the requirements in this README and the more specific checklist in [`project/README.md`](project/README.md) to guide your work.
 
 <details>
 <summary><b>Develop Static Websites...</b></summary>
 
-
-* Add 1 3rd section, which means you will need to have...
-    - at least 3 `h2` tags in all
-    - at least 9 paragraphs in all
-* Break up each section with a break tag (at least 2 in all)
-* Make a font-pairing using Google fonts (see [Top 50 Google Font Pairings [Handpicked by Pro Designers]](https://www.pagecloud.com/blog/best-google-fonts-pairings))
-* Pick a color palette for your page (from a site such as [coolers.co](https://coolors.co/) or  [Color Hunt](https://colorhunt.co/))
-* Change the color on your headings (`h1` and `h2`) (so they are not the same as your normal text)
-* There is a maximum paragraph width set in `em`s or `rem`s 
-* Make sure any color combinations meet **Color Contrast at a Level AAA**
-    - Most text must meet **Normal Level AAA**
-    - Large text may meet **Large Level AAA**
-    - According to the [Color Contrast Checker](), *"Large text is defined as ...**18.66px and bold or larger**, or ...**24px or larger**."*
+Follow the HTML and CSS requirements above. All required element counts and styling criteria are listed in [`project/README.md`](project/README.md); the automated score is based on test results, not additional section, paragraph, or line-break counts.
 </details>
 
 <details>
