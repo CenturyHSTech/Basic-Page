@@ -162,8 +162,10 @@ jobs:
 
               summary_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-          if outcome != "success" or (
-              results_path.exists() and (failed or skipped_count or not cases)
-          ):
-              raise SystemExit(1)
           PY
+
+      - name: Fail check when tests do not pass
+        if: always() && steps.tests.outcome != 'success'
+        run: |
+          echo "The test run did not pass. See the Autograding results above."
+          exit 1
