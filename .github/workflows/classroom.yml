@@ -27,13 +27,19 @@ jobs:
 
       - name: Run tests
         id: tests
-        continue-on-error: true
-        run: poetry run pytest --junitxml=pytest-results.xml
+        run: |
+          if poetry run pytest --junitxml=pytest-results.xml; then
+            echo "exit_code=0" >> "$GITHUB_OUTPUT"
+          else
+            exit_code=$?
+            echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Report results
         if: always()
         env:
           TEST_OUTCOME: ${{ steps.tests.outcome }}
+          TEST_EXIT_CODE: ${{ steps.tests.outputs.exit_code }}
         run: |
           python - <<'PY'
           import os
@@ -43,6 +49,8 @@ jobs:
           summary_path = Path(os.environ["GITHUB_STEP_SUMMARY"])
           results_path = Path("pytest-results.xml")
           outcome = os.environ["TEST_OUTCOME"]
+          test_exit_code = os.environ["TEST_EXIT_CODE"]
+          test_run_passed = outcome == "success" and test_exit_code == "0"
 
           if not results_path.exists():
               summary_path.write_text(
@@ -105,7 +113,7 @@ jobs:
                   if "proficiency" in file_name.lower()
               ]
 
-              if outcome == "success" and total > 0 and passed == total:
+              if test_run_passed and total > 0 and passed == total:
                   score = 4
               elif proficiency_files and all(
                   counts["failed"] == 0 and counts["skipped"] == 0
@@ -117,7 +125,7 @@ jobs:
               else:
                   score = 1
 
-              all_passed = outcome == "success" and total > 0 and passed == total
+              all_passed = test_run_passed and total > 0 and passed == total
               lines = [
                   "## Autograding results",
                   "",
@@ -165,7 +173,7 @@ jobs:
           PY
 
       - name: Fail check when tests do not pass
-        if: always() && steps.tests.outcome != 'success'
+        if: always() && (steps.tests.outcome != 'success' || steps.tests.outputs.exit_code != '0')
         run: |
           echo "The test run did not pass. See the Autograding results above."
           exit 1

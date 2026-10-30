@@ -114,7 +114,7 @@ min_required_elements = [
     ("h2", 3),
     ("p", 8),
     ("a", 5),
-    ("br", 2),
+    ("hr", 2),
     ("ul or ol", 3),
     ("li", 12),
     ("img", 4),
